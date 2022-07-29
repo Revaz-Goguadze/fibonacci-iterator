@@ -1,13 +1,17 @@
 # Fibonacci Iterator
 
-Intermediate level task to practice explicit interface implementation and to use the `IEnumerable<T>` interface to create an iterator.
+Intermediate level task to practice explicit interface implementation and to implement the `IEnumerable<T>` and `IEnumerator<T>` interfaces for creating an iterator.
+
+Estimated time to complete the task - 0.5h.
+
+The task requires .NET 6 SDK installed.
 
 
 ## Task Description
 
 In this task you have to [create an iterator](https://docs.microsoft.com/en-us/dotnet/csharp/iterators) to iterate over numbers in the [Fibonacci sequence](https://www.google.com/search?q=fibonacci+sequence).
 
-The iterator should be implemented using the [IEnumerable&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1) and  [IEnumerator&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1) [interfaces](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface), so the [foreach statement](https://docs.microsoft.com/en-us/dotnet/csharp/iterators#deeper-dive-into-foreach) can be used to iterate across all elements of a the sequence.
+The iterator should be implemented using the [IEnumerable&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerable-1) and  [IEnumerator&lt;T&gt;](https://docs.microsoft.com/en-us/dotnet/api/system.collections.generic.ienumerator-1) [interfaces](https://docs.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/interface), so the [foreach statement](https://docs.microsoft.com/en-us/dotnet/csharp/iterators#deeper-dive-into-foreach) can be used to iterate across all elements of the sequence.
 
 ```cs
 var fibonacciEnumerable = new FibonacciEnumerable();
@@ -41,3 +45,5 @@ The iterator consists of two classes - `FibonacciEnumerable` and `FibonacciEnume
 * Implement the `IEnumerator<T>` interface in the [FibonacciEnumerator](FibonacciIterator/FibonacciEnumerator.cs#L6) class to define an enumerator. Some of the interface members should be [implemented explicitly](https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/interfaces/explicit-interface-implementation).
 
 If you are coding in the Visual Studio, you may use the [Implement Interface](https://docs.microsoft.com/en-us/visualstudio/ide/reference/implement-interface) refactoring to enhance your experience with declaring an interface methods in a class.
+
+The `FibonacciEnumerator` class should have only `int` private fields.

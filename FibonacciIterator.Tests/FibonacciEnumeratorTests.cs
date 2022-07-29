@@ -156,5 +156,15 @@ namespace FibonacciIterator.Tests
                 Assert.That(field.FieldType, Is.EqualTo(typeof(int)));
             }
         }
+
+        [Test]
+        public void FibonacciEnumerator_HasOnlyPrivateFields()
+        {
+            // Arrange
+            FieldInfo[] fields = typeof(FibonacciEnumerator).GetFields(BindingFlags.Instance | BindingFlags.Static | BindingFlags.DeclaredOnly | BindingFlags.Public);
+
+            // Assert
+            Assert.That(fields.Length, Is.EqualTo(0));
+        }
     }
 }
