@@ -2,7 +2,7 @@
 
 Intermediate level task to practice explicit interface implementation and to implement the `IEnumerable<T>` and `IEnumerator<T>` interfaces for creating an iterator.
 
-Estimated time to complete the task - 0.5h.
+Estimated time to complete the task - 1h.
 
 The task requires .NET 6 SDK installed.
 
