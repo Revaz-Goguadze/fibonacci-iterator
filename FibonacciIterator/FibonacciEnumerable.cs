@@ -7,9 +7,8 @@ namespace FibonacciIterator
     /// </summary>
     public sealed class FibonacciEnumerable : IEnumerable<int>
     {
-        // TODO Implement an enumerable to iterate over the Fibonacci sequence numbers.
-        private int count;
-        private int skipCount;
+        private readonly int count;
+        private readonly int skipCount;
 
         public FibonacciEnumerable(int count = int.MaxValue, int skipCount = 0)
         {

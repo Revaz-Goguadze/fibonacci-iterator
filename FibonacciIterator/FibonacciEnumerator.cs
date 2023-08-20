@@ -5,11 +5,9 @@ namespace FibonacciIterator
     /// <summary>
     /// Represents an enumerator object to iterate over the Fibonacci sequence numbers.
     /// </summary>
-    public sealed class FibonacciEnumerator : IEnumerator, IEnumerator<int>
+    public sealed class FibonacciEnumerator : IEnumerator<int>
     {
-        // TODO Implement an enumerator to iterate over the Fibonacci sequence numbers.
-        private int count;
-        private int skipCount;
+        private readonly int count;
         private int currentFib;
         private int previousFib;
         private int fibIndex;
@@ -17,7 +15,6 @@ namespace FibonacciIterator
         public FibonacciEnumerator(int count, int skipCount)
         {
             this.count = count;
-            this.skipCount = skipCount;
 
             this.currentFib = 0;
             this.previousFib = 1;
